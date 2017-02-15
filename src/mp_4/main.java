@@ -6,30 +6,23 @@ public class main {
 		
 		StrictStack<Integer> stack = new StrictStack();
 		
-		System.out.println(stack.isEmpty());
+		System.out.println("Är stacken tom: " + stack.isEmpty() + "\n");
 		
-		stack.push(5);
-		stack.push(5);
-		stack.push(8);
-		stack.push(10);
-		stack.push(79);
+		System.out.println("första push: " + stack.push(5));
+		System.out.println("andra push: " + stack.push(8));
+		System.out.println("tredje push: " + stack.push(10));
+		System.out.println("fjärde push: " + stack.push(79));
+		System.out.println("femte push: " + stack.push(45) + "\n");
 		
-		System.out.println(stack.top());
+		System.out.println("Är stacken tom? " + stack.isEmpty() + "\n");
 		
-		System.out.println(stack.isEmpty());
+		System.out.println("Vilket element ligger överst på stacken? " + stack.top() + "\n");
 		
-		for(int i = 0; i < 5; i++){
-			System.out.println(stack.pop());
-		}
+		System.out.println("Tar bort översta elementet, dvs: " + stack.pop() + "\n");
 		
-		System.out.println(stack.top());
+		System.out.println("Vilket element ligger på toppen? " + stack.top());
 		
-		System.out.println(stack.isEmpty());
-		
-		
-		
-		
-
+		System.out.println("-------------------------------------------------");
 	}
 
 }
