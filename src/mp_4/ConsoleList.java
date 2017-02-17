@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-public class ConsoleList<E> extends ListDecorator<E>{
+public class ConsoleList<E> extends ListDecorator<E> {
 
 	public ConsoleList(List<E> decoratedList) {
 		super(decoratedList);
@@ -14,47 +14,63 @@ public class ConsoleList<E> extends ListDecorator<E>{
 
 	@Override
 	public boolean add(E e) {
-		return decoratedList.add(e);
+		boolean add = decoratedList.add(e);
+		System.out.println(add);
+		return add;
 	}
 
 	@Override
 	public void add(int index, E element) {
 		decoratedList.add(index, element);
+		System.out.println(decoratedList);
 	}
 
 	@Override
 	public boolean addAll(Collection<? extends E> c) {
-		return decoratedList.addAll(c);
+		boolean addAll = decoratedList.addAll(c);
+		System.out.println(addAll);
+		return addAll;
 	}
 
 	@Override
 	public boolean addAll(int index, Collection<? extends E> c) {
-		return decoratedList.addAll(index, c);
+		boolean addAll = decoratedList.addAll(index, c);
+		System.out.println(addAll);
+		return addAll;
 	}
 
 	@Override
 	public void clear() {
 		decoratedList.clear();
+		System.out.println(decoratedList);
 	}
 
 	@Override
 	public boolean contains(Object o) {
-		return decoratedList.contains(o);
+		boolean contains = decoratedList.contains(o);
+		System.out.println(contains);
+		return contains;
 	}
 
 	@Override
 	public boolean containsAll(Collection<?> c) {
-		return decoratedList.containsAll(c);
+		boolean containsAll = decoratedList.containsAll(c);
+		System.out.println(containsAll);
+		return containsAll;
 	}
 
 	@Override
 	public E get(int index) {
-		return decoratedList.get(index);
+		E getIndex = decoratedList.get(index);;
+		System.out.println(getIndex);
+		return getIndex;
 	}
 
 	@Override
 	public int indexOf(Object o) {
-		return decoratedList.indexOf(o);
+		int indexOf = decoratedList.indexOf(o);
+		System.out.println(indexOf);
+		return indexOf;
 	}
 
 	@Override
@@ -64,66 +80,91 @@ public class ConsoleList<E> extends ListDecorator<E>{
 	
 	@Override
 	public Iterator<E> iterator() {
-		return decoratedList.iterator();
+		Iterator<E> iterator = decoratedList.iterator();
+		System.out.println(iterator);
+		return iterator;
 	}
 
 	@Override
 	public int lastIndexOf(Object o) {
-		return decoratedList.lastIndexOf(o);
+		int lastIndexOf = decoratedList.lastIndexOf(o);
+		System.out.println(lastIndexOf);
+		return lastIndexOf;
 	}
 
 	@Override
 	public ListIterator<E> listIterator() {
-		return decoratedList.listIterator();
+		ListIterator<E> listIterator = decoratedList.listIterator();
+		System.out.println(listIterator);
+		return listIterator;
 	}
 
 	@Override
 	public ListIterator<E> listIterator(int index) {
-		return decoratedList.listIterator(index);
+		ListIterator<E> listIterator = decoratedList.listIterator(index);
+		System.out.println(listIterator);
+		return listIterator;
 	}
 
 	@Override
 	public boolean remove(Object o) {
-		return decoratedList.remove(o);
+		boolean remove = decoratedList.remove(o);
+		System.out.println(remove);
+		return remove;
 	}
 
 	@Override
 	public E remove(int index) {
-		return decoratedList.remove(index);
+		E remove = decoratedList.remove(index);
+		System.out.println(remove);
+		return remove;
 	}
 
 	@Override
 	public boolean removeAll(Collection<?> c) {
-		return decoratedList.removeAll(c);
+		boolean removeAll = decoratedList.removeAll(c);
+		System.out.println(removeAll);
+		return removeAll;
 	}
 
 	@Override
 	public boolean retainAll(Collection<?> c) {
-		return decoratedList.retainAll(c);
+		boolean retainAll = decoratedList.retainAll(c);
+		System.out.println(retainAll);
+		return retainAll;
 	}
 
 	@Override
 	public E set(int index, E element) {
-		return decoratedList.set(index, element);
+		E set = decoratedList.set(index, element);
+		System.out.println(set);
+		return set;
 	}
 
 	@Override
 	public int size() {
-		return decoratedList.size();
+		int size = decoratedList.size();
+		System.out.println(size);
+		return size;
 	}
 
 	@Override
 	public List<E> subList(int fromIndex, int toIndex) {
-		return decoratedList.subList(fromIndex, toIndex);
+		List<E> subList = decoratedList.subList(fromIndex, toIndex);
+		return subList;
 	}
 
 	@Override
 	public Object[] toArray() {
-		return decoratedList.toArray();
+		Object[] toArray = decoratedList.toArray();
+		System.out.println(toArray);
+		return toArray;
 	}
 
 	@Override
 	public <T> T[] toArray(T[] a) {
-		return decoratedList.toArray(a);
+		T[] toArray = decoratedList.toArray(a);
+		System.out.println(toArray);
+		return toArray;
 	}
 }
