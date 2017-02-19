@@ -9,7 +9,6 @@ public class ConsoleList<E> extends ListDecorator<E> {
 
 	public ConsoleList(List<E> decoratedList) {
 		super(decoratedList);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
