@@ -75,7 +75,9 @@ public class ConsoleList<E> extends ListDecorator<E> {
 
 	@Override
 	public boolean isEmpty() {
-		return decoratedList.isEmpty();
+		boolean isEmpty = decoratedList.isEmpty();
+		System.out.println(isEmpty);
+		return isEmpty;
 	}
 	
 	@Override
@@ -151,6 +153,7 @@ public class ConsoleList<E> extends ListDecorator<E> {
 	@Override
 	public List<E> subList(int fromIndex, int toIndex) {
 		List<E> subList = decoratedList.subList(fromIndex, toIndex);
+		System.out.println(subList);
 		return subList;
 	}
 

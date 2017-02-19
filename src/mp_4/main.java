@@ -1,6 +1,7 @@
 package mp_4;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.LinkedList;
 
 public class main {
@@ -10,9 +11,7 @@ public class main {
 		StrictStack<Integer> stack = new StrictStack();
 		ArrayList arrayListTest = new ArrayList();
 		ConsoleList consoleListTest = new ConsoleList(arrayListTest);
-		
-		
-		
+			
 		
 /*		System.out.println("Är stacken tom: " + stack.isEmpty() + "\n");
 		
@@ -32,29 +31,107 @@ public class main {
 		
 		System.out.println("-------------------------------------------------");*/
 		
-		consoleListTest.add(1);
-		consoleListTest.add(4, 32);
+		Collection c = new ArrayList<Integer>();
+		c.add(1); c.add(2); c.add(3);
+		Object o = 8;
+		
+		System.out.println("Demo av metoder: " + "\n"
+				+ " add(E e) " + "\n"
+				+ " add(int index, E element)" + "\n"
+				+ " addAll(Collection<? extends E> c)" + "\n" 
+				+ " addAll(int index, Collection<? extends E> c) " + "\n"
+				+ " size()" + "\n"
+				+ " contains(Object o)" + "\n"
+				+ " containsAll(Collection<?> c)" + "\n"
+				+ " subList(int fromIndex, int toIndex)" + "\n"
+				+ " get(int index)" + "\n"
+				+ " indexOf(Object o)" + "\n"
+				+ " isEmpty()" + "\n"
+				+ " lastIndexOf(Object o)" + "\n"
+				+ " remove(Object o)" + "\n"
+				+ " remove(int index)" + "\n"
+				+ " set(int index, E element)" + "\n"
+				+ " retainAll(Collection<?> c)" + "\n"
+				+ " removeAll(Collection<?> c)" + "\n"
+				+ " clear()" + "\n"
+				);
+		
+		System.out.print("Lades ett element till i slutet av listan? ");
+		consoleListTest.add(3);
+		System.out.println(arrayListTest + "\n");
+		
+		System.out.println("Lägg till elementet 8 på postionen 0 i listan ");
+		consoleListTest.add(0, 8);
+		System.out.println();
+		
+		System.out.print("Lades kollektionen [1, 2, 3] till i slutet av listan? ");
 		consoleListTest.addAll(c);
-		consoleListTest.addAll(index, c);
-		consoleListTest.clear();
-		consoleListTest.contains(o);
-		consoleListTest.containsAll(c);
-		consoleListTest.get(index);
-		consoleListTest.indexOf(o);
-		consoleListTest.isEmpty();
-		consoleListTest.iterator();
-		consoleListTest.lastIndexOf(o);
-		consoleListTest.listIterator();
-		consoleListTest.listIterator(index);
-		consoleListTest.remove(o);
-		consoleListTest.remove(index);
-		consoleListTest.removeAll(c);
-		consoleListTest.retainAll(c);
-		consoleListTest.set(index, element);
+		System.out.println(arrayListTest + "\n");
+		
+		System.out.print("Lades kollektionen [1, 2, 3] till från postion 0 i listan? ");
+		consoleListTest.addAll(0, c);
+		System.out.println(arrayListTest + "\n");
+		
+		System.out.print("Hur många element finns i listan? ");
 		consoleListTest.size();
-		consoleListTest.subList(fromIndex, toIndex);
-		consoleListTest.toArray();
-		consoleListTest.toArray(a);
+		System.out.println();
+		
+		System.out.print("Innehåller listan elementet 8? ");
+		consoleListTest.contains(8);
+		System.out.println();
+		
+		System.out.print("Innehåller listan alla element från kollektionen [1, 2, 3]? ");
+		consoleListTest.containsAll(c);
+		System.out.println();
+		
+		System.out.println("Gör en lista av elementen mellan positionerna 2 och 5");
+		consoleListTest.subList(2, 5);
+		System.out.println();
+		
+		System.out.println("Vilket element befinner sig i position 3 i listan? ");
+		consoleListTest.get(3);
+		System.out.println();
+		
+		System.out.println("Vilken postion har elementet 8 i listan? ");
+		consoleListTest.indexOf(8);
+		System.out.println();
+		
+		System.out.print("Är listan tom? ");
+		consoleListTest.isEmpty();
+		System.out.println();
+		
+		System.out.println("Vilken position förekommer elementet 3 senast i listan? ");
+		consoleListTest.lastIndexOf(3);
+		System.out.println();
+		
+		System.out.print("Togs elementet 8 bort från listan? ");
+		consoleListTest.remove(o);
+		System.out.println(arrayListTest + "\n");
+		
+		System.out.println("Elementet på postion 3 togs bort. Vilket element togs bort? ");
+		consoleListTest.remove(3);
+		System.out.println();
+		
+		System.out.println("De tre första elementen i listan byttes ut. Elementen som försvann var ");
+		consoleListTest.set(0, 79);
+		consoleListTest.set(1, 14);
+		consoleListTest.set(2, 38);
+		System.out.println("Listan med de nya elementen " + arrayListTest + "\n");
+		
+		System.out.print("Togs alla element som inte finns i kollektionen [1, 2, 3] bort? ");
+		consoleListTest.retainAll(c);
+		System.out.println(arrayListTest + "\n");
+		
+		System.out.print("Togs alla element bort från listan? ");
+		consoleListTest.removeAll(c);
+		System.out.println(arrayListTest + "\n");
+		
+		System.out.print("Lades kollektionen [1, 2, 3] till i slutet av listan? ");
+		consoleListTest.addAll(c);
+		System.out.println(arrayListTest + "\n");
+		
+		System.out.println("Ta bort alla element från listan");
+		consoleListTest.clear();
 	}
 
 }
